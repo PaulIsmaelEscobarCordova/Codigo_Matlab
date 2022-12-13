@@ -1,0 +1,72 @@
+disp('CONJUNTA PRIMER PARCIAL DE METODOS NUMERICOS')
+CONJUNTA PRIMER PARCIAL DE METODOS NUMERICOS
+disp('I EJERCICIO NOTAS')
+I EJERCICIO NOTAS
+notas(10,7.5,8)
+EL ESTUDIANTE HA APROBADO LA MATERIA
+notas(5,3.5,1.5)
+EL ESTUDIANTE HA APROBADO LA MATERIA
+disp('EJERCICIO II BISECCION')
+EJERCICIO II BISECCION
+Biseccion('(9.8/2*x^2)*(sinh(x)-sin(x))',exp(-3))
+
+h = 
+
+  <a href="matlab:helpPopup matlab.graphics.chart.primitive.Line" style="font-weight:bold">Line</a> with properties:
+
+              Color: [0 0.447000000000000 0.741000000000000]
+          LineStyle: '-'
+          LineWidth: 0.500000000000000
+             Marker: 'none'
+         MarkerSize: 6
+    MarkerFaceColor: 'none'
+              XData: [1×434 double]
+              YData: [1×434 double]
+              ZData: [1×0 double]
+
+  Show <a href="matlab:if exist('h', 'var'), matlab.graphics.internal.getForDisplay('h', h, 'matlab.graphics.chart.primitive.Line'), else, matlab.graphics.internal.getForDisplay('h'), end">all properties</a>
+
+Ingrese el valor de a: -0.013
+
+a =
+
+  -0.013000000000000
+
+Ingrese el valor de b: 0.016
+
+b =
+
+   0.016000000000000
+
+Se necesitan por lo tanto,aproximadamente el siguiente número de iteraciones: 
+ 9.00
+Ingrese el número de iteraciones: 9
+
+n =
+
+     9
+
+
+ 	k 			a 		b 		c 	f(c) 		error 
+   1.000000000000000  -0.013000000000000   0.016000000000000   0.001500000000000   0.000000000000012   0.014500000000000
+   2.000000000000000  -0.013000000000000   0.001500000000000  -0.005750000000000  -0.000000000010266   0.007250000000000
+   3.000000000000000  -0.005750000000000   0.001500000000000  -0.002125000000000  -0.000000000000071   0.003625000000000
+   4.000000000000000  -0.002125000000000   0.001500000000000  -0.000312500000000  -0.000000000000000   0.001812500000000
+   5.000000000000000  -0.000312500000000   0.001500000000000   0.000593750000000   0.000000000000000   0.000906250000000
+   6.000000000000000  -0.000312500000000   0.000593750000000   0.000140625000000   0.000000000000000   0.000453125000000
+   7.000000000000000  -0.000312500000000   0.000140625000000  -0.000085937500000  -0.000000000000000   0.000226562500000
+   8.000000000000000  -0.000085937500000   0.000140625000000   0.000027343750000   0.000000000000000   0.000113281250000
+   9.000000000000000  -0.000085937500000   0.000027343750000  -0.000029296875000  -0.000000000000000   0.000056640625000
+
+Solución:
+ c=-0.00003
+f(c)=-0.00000
+error= 0.00006
+
+ans =
+
+    -2.929687500000030e-05
+
+disp('FIGURA 1')
+FIGURA 1
+diary off
