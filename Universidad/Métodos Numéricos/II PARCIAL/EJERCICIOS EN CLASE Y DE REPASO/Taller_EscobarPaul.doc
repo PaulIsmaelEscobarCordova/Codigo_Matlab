@@ -1,0 +1,173 @@
+disp('UNIVERSIDAD DE LAS FUERZAS ARMADAS --ESPE--')
+UNIVERSIDAD DE LAS FUERZAS ARMADAS --ESPE--
+disp('CARRERA: INGENIERIA GEOESPACIAL')
+CARRERA: INGENIERIA GEOESPACIAL
+disp('ASIGNATURA METODOS NUMERICOS')
+ASIGNATURA METODOS NUMERICOS
+disp('TALLER I - II PARCIAL')
+TALLER I - II PARCIAL
+disp('ESTUDIANTE: PAUL ESCOBAR')
+ESTUDIANTE: PAUL ESCOBAR
+disp('DOCENTE: Ing. Patricio Pugarín')
+DOCENTE: Ing. Patricio Pugarín
+disp('RESOLVER EL SIGUIENTE SISTEMA UTILIZANDO SOLO LOS PROGRAMAS UTILIZADOS EN CLASES POR EL METODO DE ELIMINACION GAUSSIANA CON SUSTITUCION HACIA ATRAS')
+RESOLVER EL SIGUIENTE SISTEMA UTILIZANDO SOLO LOS PROGRAMAS UTILIZADOS EN CLASES POR EL METODO DE ELIMINACION GAUSSIANA CON SUSTITUCION HACIA ATRAS
+w=[-0.04 0.04 0.12 3;0.56 -1.56 0.32 1;-0.24 1.24 -0.28 0]
+
+w =
+
+   -0.0400    0.0400    0.1200    3.0000
+    0.5600   -1.5600    0.3200    1.0000
+   -0.2400    1.2400   -0.2800         0
+
+A=w;
+Intercambiofilas([-0.04 0.04 0.12 3;0.56 -1.56 0.32 1;-0.24 1.24 -0.28 0],1,2)
+
+A =
+
+   -0.0400    0.0400    0.1200    3.0000
+    0.5600   -1.5600    0.3200    1.0000
+   -0.2400    1.2400   -0.2800         0
+
+
+ans =
+
+    0.5600   -1.5600    0.3200    1.0000
+   -0.0400    0.0400    0.1200    3.0000
+   -0.2400    1.2400   -0.2800         0
+
+c=ans
+
+c =
+
+    0.5600   -1.5600    0.3200    1.0000
+   -0.0400    0.0400    0.1200    3.0000
+   -0.2400    1.2400   -0.2800         0
+
+Intercambiocolumnas(c,1,2)
+
+A =
+
+    0.5600   -1.5600    0.3200    1.0000
+   -0.0400    0.0400    0.1200    3.0000
+   -0.2400    1.2400   -0.2800         0
+
+
+ans =
+
+   -1.5600    0.5600    0.3200    1.0000
+    0.0400   -0.0400    0.1200    3.0000
+    1.2400   -0.2400   -0.2800         0
+
+d=ans
+
+d =
+
+   -1.5600    0.5600    0.3200    1.0000
+    0.0400   -0.0400    0.1200    3.0000
+    1.2400   -0.2400   -0.2800         0
+
+Combinarfilas(d,1,2,(d(2,1)/d(1,1)))
+
+ans =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0   -0.0256    0.1282    3.0256
+    1.2400   -0.2400   -0.2800         0
+
+e=ans
+
+e =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0   -0.0256    0.1282    3.0256
+    1.2400   -0.2400   -0.2800         0
+
+Combinarfilas(e,1,3,(e(3,1)/d(1,1)))
+
+ans =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0   -0.0256    0.1282    3.0256
+         0    0.2051   -0.0256    0.7949
+
+d=ans
+
+d =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0   -0.0256    0.1282    3.0256
+         0    0.2051   -0.0256    0.7949
+
+f=ans
+
+f =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0   -0.0256    0.1282    3.0256
+         0    0.2051   -0.0256    0.7949
+
+Intercambiofilas(f,2,3)
+
+A =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0   -0.0256    0.1282    3.0256
+         0    0.2051   -0.0256    0.7949
+
+
+ans =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0    0.2051   -0.0256    0.7949
+         0   -0.0256    0.1282    3.0256
+
+g=ans
+
+g =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0    0.2051   -0.0256    0.7949
+         0   -0.0256    0.1282    3.0256
+
+Combinarfilas(g,2,3,(g(3,2)/g(2,2)))
+
+ans =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0    0.2051   -0.0256    0.7949
+         0         0    0.1250    3.1250
+
+h=ans
+
+h =
+
+   -1.5600    0.5600    0.3200    1.0000
+         0    0.2051   -0.0256    0.7949
+         0         0    0.1250    3.1250
+
+h(:,[1:3])
+
+ans =
+
+   -1.5600    0.5600    0.3200
+         0    0.2051   -0.0256
+         0         0    0.1250
+
+h(:,4)
+
+ans =
+
+    1.0000
+    0.7949
+    3.1250
+
+sistemaTs((h(:,[1:3])),(h(:,4)))
+
+ans =
+
+    7.0000
+    7.0000
+   25.0000
+
+diary off
