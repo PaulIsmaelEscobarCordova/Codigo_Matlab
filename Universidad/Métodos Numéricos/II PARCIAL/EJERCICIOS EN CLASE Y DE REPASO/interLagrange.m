@@ -11,5 +11,8 @@ function cont=interLagrange(x,fx)
         
         hold on
         plot(x,fx,'ro') %GRAFICA LOS PUNTOS DE ENTRADA
+        xlabel('Eje x'), ylabel('Eje y')
+        title('POLINOMIO INTERPOLADOR DE LAGRANGE')
+        grid on
         hold off
 end

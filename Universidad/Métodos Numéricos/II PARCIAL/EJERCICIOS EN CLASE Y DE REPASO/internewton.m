@@ -19,5 +19,7 @@ A(:,1)=f';
         grid on 
         hold on
         plot(x,f,'ro') %GRAFICA LOS PUNTOS DE ENTRADA
+        xlabel('Eje x'), ylabel('Eje y')
+        title('POLINOMIO INTERPOLADOR DE NEWTON')
         hold off
 end
