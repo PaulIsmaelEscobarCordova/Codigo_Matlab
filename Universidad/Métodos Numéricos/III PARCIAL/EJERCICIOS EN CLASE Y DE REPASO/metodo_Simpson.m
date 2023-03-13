@@ -2,7 +2,7 @@
 function int=metodo_Simpson(f,a,b)
 % numero de subintervalos
 % Al n hay que ponerle en la función 
-n=10; % ESTABA 50
+n=4; % ESTABA 50
 fx=inline(f);
 h=(b-a)/n;
     for i=1:n+1
